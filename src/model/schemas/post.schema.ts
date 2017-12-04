@@ -3,14 +3,14 @@ import { ICommentDocument, CommentSchema } from './comment.schema';
 import { IUserDocument, UserSchema} from './user.schema';
 
 export interface IPostDocument extends Document { 
-    userId: string;
+    user_id: string;
     content: string,
     time: string;
     comments: [ICommentDocument];
 }
 
 export const PostSchema: Schema = new Schema({
-    userId: String,
+    user_id: String,
     content: String,
     time: String,
     comments: [CommentSchema]

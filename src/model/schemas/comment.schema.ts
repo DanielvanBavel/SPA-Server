@@ -1,11 +1,13 @@
 import { Document, Schema } from 'mongoose';
 
 export interface ICommentDocument extends Document {
-    name: string;
-    amount: number;
+    username: string;
+    content: string;
+    time: string;
 }
 
 export const CommentSchema: Schema = new Schema({
-    name: String,
-    amount: Number
+    username: String,
+    content: String,
+    time: String
 });
