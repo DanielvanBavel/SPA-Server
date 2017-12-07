@@ -4,6 +4,7 @@ import { IUserDocument, UserSchema} from './user.schema';
 
 export interface IPostDocument extends Document { 
     user_id: string;
+    username: string;
     content: string,
     time: string;
     comments: [ICommentDocument];
@@ -11,6 +12,7 @@ export interface IPostDocument extends Document {
 
 export const PostSchema: Schema = new Schema({
     user_id: String,
+    username: String,
     content: String,
     time: String,
     comments: [CommentSchema]
