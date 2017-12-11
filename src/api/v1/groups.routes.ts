@@ -39,13 +39,16 @@ routes.put('/:id', (req, res, next) => {
     const groupId = req.params.id;
     const groupProps = req.body;
 
-    Group.findByIdAndUpdate({_id: groupId}, groupProps)
+    Group.findByIdAndUpdate({
+        _id: groupId
+    }, groupProps)
         .then(() => Group.findById({ _id: groupId }))
         .then((group) => res.status(202).json(group))
         .catch(next);
 });
 
 routes.delete('/:id', (req, res, next) => {
+
     const groupId = req.params.id;
 
     Group.remove({ _id: groupId })
