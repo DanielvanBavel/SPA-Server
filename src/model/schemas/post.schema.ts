@@ -7,7 +7,7 @@ export interface IPostDocument extends Document {
     username: string;
     content: string,
     time: string;
-    comments: [ICommentDocument];
+    comments: ICommentDocument[];
 }
 
 export const PostSchema: Schema = new Schema({
