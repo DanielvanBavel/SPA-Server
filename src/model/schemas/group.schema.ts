@@ -3,7 +3,7 @@ import { IPostDocument, PostSchema } from './post.schema';
 
 export interface IGroupDocument extends Document { 
     name: string;
-    posts: [IPostDocument];
+    posts: IPostDocument[];
 }
 
 export const GroupSchema: Schema = new Schema({

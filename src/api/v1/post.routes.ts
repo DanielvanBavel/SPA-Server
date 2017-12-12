@@ -1,5 +1,6 @@
 import express = require('express');
 import { Post } from '../../model/post.model';
+import { Comment } from '../../model/comment.model';
 
 const routes = express.Router();
 
