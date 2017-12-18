@@ -7,6 +7,11 @@ export interface IGroupDocument extends Document {
 }
 
 export const GroupSchema: Schema = new Schema({
-    name: String,
+    name: {
+        type: String,
+        required: true
+    },
     posts: [PostSchema]
+}, {
+    timestamps: false
 });

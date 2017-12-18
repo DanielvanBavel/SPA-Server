@@ -9,9 +9,23 @@ export interface IPostDocument extends Document {
 }
 
 export const PostSchema: Schema = new Schema({
-    user_id: String,
-    username: String,
-    content: String,
-    time: String,
+    user_id: {
+        type: String,
+        required: false
+    },
+    username: {
+        type: String,
+        required: false
+    },
+    content: {
+        type: String,
+        required: true
+    },
+    time: {
+        type: String,
+        required: false
+    },
     comments: [CommentSchema]
-});
+}, {
+     timestamps: true
+ });

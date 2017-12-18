@@ -7,7 +7,18 @@ export interface ICommentDocument extends Document {
 }
 
 export const CommentSchema: Schema = new Schema({
-    username: String,
-    reply: String,
-    time: String
+    username: {
+        type: String,
+        required: false
+    },
+    reply: {
+        type: String,
+        required: true
+    },
+    time: {
+        type: String,
+        required: false
+    },
+}, {
+    timestamps: true
 });
